@@ -1,0 +1,12 @@
+1-Stack Navigation
+    1.1-Index
+    1.2-(tabs) Tab Navigation
+        1.2.1 - Início
+        1.2.2 - Stack Navigation Categorias
+            - 1.2.2.1 - Listagem de Categorias
+            - 1.2.2.2 - Listagem de produtos de UMA categoria
+        1.2.3 - Sobre
+    1.3-Produto Único
+
+OBS Sempre que há navegação para algum lugar teremos um componente navigation
+Este pode ser Stack, Tab ou ainda Drawer.
