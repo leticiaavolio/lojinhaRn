@@ -4,7 +4,7 @@
 
 import {data} from "../data/index";
 
-export const getallCategorie=()=>{
+export const getallCategories=()=>{
     return data.categories;
 }
 export const getCategoryById=(pId:number)=>{
