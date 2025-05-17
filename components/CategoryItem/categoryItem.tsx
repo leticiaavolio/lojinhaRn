@@ -1,32 +1,38 @@
 import { TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import { router } from "expo-router";
+import { Category } from "../../types/category";
 /* import { styles } from './buttonStyle'; */
 
 
 type Props = {
-    title: string,
-    imagem: object,
+    category:Category;
 }
 
 
-export default function CategoryItem(props:Props) {
+export default function CategoryItem({category}:Props) {
+
+    function handleClick(){
+        router.push(`/categories/${category.id}`)
+    }
 
     return (
-        <TouchableOpacity style={styles.button}>
-            <Image source={props.imagem} style={styles.img}/> 
-            <Text style={styles.text}>{props.title}</Text> 
+        <TouchableOpacity style={styles.button} onPress={handleClick}>
+            <Image source={{uri: category.cover}} style={styles.img}/> 
+            <Text style={styles.text}>{category.title}</Text> 
         </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     button: {
-        height:130,
+        height:140,
         width:'80%',
         justifyContent:'center',
         alignSelf:'center',
         margin:20,
         backgroundColor:'black',
         borderRadius:10,
+        overflow:'hidden'
     },
     text:{
         fontSize:30,
