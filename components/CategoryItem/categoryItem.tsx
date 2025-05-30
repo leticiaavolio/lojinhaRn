@@ -1,7 +1,6 @@
 import { TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { router } from "expo-router";
 import { Category } from "../../types/category";
-/* import { styles } from './buttonStyle'; */
 
 
 type Props = {

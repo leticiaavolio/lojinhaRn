@@ -1,7 +1,6 @@
-import { TouchableOpacity, Text, StyleSheet, Image, Pressable, View } from "react-native";
-import { router } from "expo-router";
+import { Text, StyleSheet, Image, Pressable, View } from "react-native";
 import { Product } from "../../types/product";
-/* import { styles } from './buttonStyle'; */
+import { Link } from "expo-router";
 
 
 type Props = {
@@ -12,6 +11,7 @@ type Props = {
 export default function ProductItem({product}:Props) {
 
     return (
+        <Link href={`/product/${product.id}`} asChild>
         <Pressable style={styles.item}>
             <Image source={{uri: product.image}} style={styles.img}/>
             <View style={styles.textContainer}>
@@ -20,6 +20,7 @@ export default function ProductItem({product}:Props) {
                 <Text style={styles.price}>R${product.price}</Text>
             </View>
         </Pressable>
+        </Link>
     );
 }
 
