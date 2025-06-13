@@ -6,11 +6,10 @@ import {Stack} from 'expo-router';
 //layout serve para chamar as routas 
 export default function RootLayout(){
     return(
-        <Stack screenOptions={{headerShown:true}}>
+        <Stack screenOptions={{headerShown:false}}>
             <Stack.Screen name="index"/>
-            <Stack.Screen name="teste"/>
             <Stack.Screen name= "(tabs)" options={{title: "Produtos"}}/>
-            <Stack.Screen name= "(product/[id])" options={{headerShown:true, title: ""}}/>
+            <Stack.Screen name= "product/[id]" options={{headerShown:true, title: ""}}/>
             
         </Stack>
     )
